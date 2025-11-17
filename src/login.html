@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page- Penora</title>
+    <link rel="icon" type="image/png" href="../img/favicon.png" />
+    <link rel="stylesheet" href="./output.css" />
+    <script src="./home.js"></script>
+  </head>
+
+  <body class="bg-gray-800 flex justify-center items-center min-h-screen p-4">
+    <div
+      class="flex flex-col md:flex-row bg-gray-400 rounded-xl drop-shadow-2xl border-gray-950 border-2 overflow-hidden w-full max-w-4xl"
+    >
+      <!-------------------------------- Left Side - Form ------------------------------------------------>
+      <div class="p-10 w-full md:w-1/2">
+        <div class="text-center">
+          <h1 class="font-bold text-2xl md:text-4xl mb-2">Welcome Back..!</h1>
+          <p class="text-black pb-8">Enter your credentials to access your account.</p>
+          <h2 class="font-bold text-xl md:text-2xl text-black mb-5">Login</h2>
+        </div>
+
+        <form>
+          <div class="mb-4">
+            <label class="block text-sm mb-2 font-medium text-black" for="email">Email:</label>
+            <input
+              id="email"
+              class="w-full bg-gray-700 text-white rounded-sm focus:outline-none focus:ring-2 p-2 md:p-3 focus:ring-black"
+              type="email"
+              placeholder="Enter your mail address"
+              required
+            />
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-sm mb-2 font-medium text-black" for="password"
+              >Password:</label
+            >
+            <input
+              id="password"
+              class="w-full bg-gray-700 text-white rounded-sm focus:outline-none focus:ring-2 p-2 md:p-3 focus:ring-black"
+              type="password"
+              placeholder="Enter your Password"
+              required
+            />
+          </div>
+
+          <div class="flex justify-between items-center mb-4">
+            <label class="flex items-center space-x-2">
+              <input type="checkbox" />
+              <span class="text-sm">Remember me</span>
+            </label>
+            <a class="text-sm text-blue-900" href="#"> Forgot Password?</a>
+          </div>
+
+          <button
+            id="submit"
+            type="button"
+            onclick="loginUser(event)"
+            class="w-full bg-blue-800 text-white py-1.5 md:py-2 rounded-md mt-4 cursor-pointer hover:bg-blue-600"
+          >
+            Log in
+          </button>
+
+          <div class="flex justify-center items-center my-6">
+            <hr class="grow border-gray-500" />
+            <span class="px-3 text-gray-700 text-sm">OR</span>
+            <hr class="grow border-gray-500" />
+          </div>
+
+          <button
+            class="w-full bg-white text-black font-bold py-1.5 md:py-2 rounded-md cursor-pointer hover:bg-gray-200"
+          >
+            Sign in with Google
+          </button>
+
+          <div
+            class="flex justify-around items-center flex-col md:flex-row flex-wrap md:flex-nowrap mt-4 space-x-1 px-6"
+          >
+            <p>Don't have an account?</p>
+            <a class="text-sm text-blue-900" href="signup.html">Sign up</a>
+          </div>
+        </form>
+      </div>
+
+      <!-------------------------------------------- Right Side - Image ----------------------------------->
+      <div class="hidden md:block w-1/2">
+        <img
+          src="../img/nature.jpg"
+          alt="Login"
+          title="login to dashboard"
+          class="h-full w-full object-cover"
+        />
+      </div>
+    </div>
+  </body>
+</html>
