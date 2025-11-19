@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact & Help | Penora</title>
+    <link rel="icon" type="image/png" href="../img/favicon.png" />
+    <link href="output.css" rel="stylesheet" />
+  </head>
+
+  <body class="bg-gray-950 text-white font-sans overflow-x-hidden">
+    <!-- 🌐 Navbar -->
+    <header class="bg-gray-900 py-4 shadow-md top-0 left-0 right-0 z-50">
+      <nav class="max-w-6xl mx-auto flex items-center justify-between px-5">
+        <a href="./index.html" class="text-2xl font-bold text-indigo-400">Penora</a>
+        <ul class="hidden md:flex space-x-6 text-gray-300">
+          <li><a href="./index.html" class="hover:text-indigo-400">Home</a></li>
+          <li><a href="./aboutUS.html" class="hover:text-indigo-400">About</a></li>
+          <li><a href="./pricing.html" class="hover:text-indigo-400">Pricing</a></li>
+          <li><a href="./contact.html" class="text-indigo-400 font-semibold">Contact</a></li>
+        </ul>
+        <div class="flex items-center gap-3">
+          <a
+            href="./login.html"
+            class="px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 transition-all"
+            >Login</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <!-- 🟣 Page Header -->
+    <section
+      class="mt-24 py-28 text-center bg-linear-to-r from-indigo-600/20 via-purple-600/20 to-pink-500/20"
+    >
+      <div class="max-w-3xl mx-auto px-6">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white">Contact Us & Help Center</h1>
+        <p class="text-gray-300 text-lg">
+          We’re here to help you make the most out of your Penora experience 🚀
+        </p>
+      </div>
+    </section>
+
+    <!-- 🧩 Main Content -->
+    <section class="max-w-6xl mx-auto px-6 md:px-10 py-16 grid md:grid-cols-2 gap-12">
+      <!-- ✉️ Contact Form -->
+      <div
+        class="bg-gray-900 rounded-2xl p-8 md:p-10 shadow-xl hover:shadow-indigo-500/50 transition-all"
+      >
+        <h2 class="text-3xl font-semibold mb-6 text-indigo-400">📬 Get in Touch</h2>
+        <p class="text-gray-400 mb-8 leading-relaxed">
+          Have a question, feedback, or collaboration idea? We’d love to hear from you.
+        </p>
+
+        <form class="flex flex-col gap-5">
+          <input
+            type="text"
+            placeholder="Your Name"
+            class="bg-gray-800 px-5 py-3 rounded-lg border border-gray-700 focus:border-indigo-500 outline-none"
+          />
+          <input
+            type="email"
+            placeholder="Your Email"
+            class="bg-gray-800 px-5 py-3 rounded-lg border border-gray-700 focus:border-indigo-500 outline-none"
+          />
+          <textarea
+            rows="6"
+            placeholder="Your Message..."
+            class="bg-gray-800 px-5 py-3 rounded-lg border border-gray-700 focus:border-indigo-500 outline-none resize-none"
+          ></textarea>
+          <button
+            type="submit"
+            class="bg-linear-to-r from-indigo-500 to-pink-500 py-3 px-6 rounded-lg font-semibold text-white hover:shadow-[0_0_20px_rgba(99,102,241,0.8)] transition-all"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+
+      <!-- 💡 Help Center -->
+      <div
+        class="bg-gray-900 rounded-2xl p-8 md:p-10 shadow-xl hover:shadow-pink-500/50 transition-all"
+      >
+        <h2 class="text-3xl font-semibold mb-6 text-pink-400">💡 Help Center</h2>
+        <p class="text-gray-400 mb-8 leading-relaxed">
+          Need quick answers? Browse our FAQs or reach out directly for support.
+        </p>
+
+        <div class="space-y-5">
+          <details
+            class="bg-gray-800 rounded-lg p-5 hover:border-l-4 hover:border-indigo-400 transition-all"
+          >
+            <summary class="cursor-pointer font-semibold text-indigo-300 text-lg">
+              How do I create an account?
+            </summary>
+            <p class="text-gray-400 mt-3">
+              Click on “Sign Up” in the top-right corner, enter your details, and verify your email.
+            </p>
+          </details>
+
+          <details
+            class="bg-gray-800 rounded-lg p-5 hover:border-l-4 hover:border-indigo-400 transition-all"
+          >
+            <summary class="cursor-pointer font-semibold text-indigo-300 text-lg">
+              How can I reset my password?
+            </summary>
+            <p class="text-gray-400 mt-3">
+              Go to the login page and click “Forgot Password.” Follow the steps to reset it.
+            </p>
+          </details>
+
+          <details
+            class="bg-gray-800 rounded-lg p-5 hover:border-l-4 hover:border-indigo-400 transition-all"
+          >
+            <summary class="cursor-pointer font-semibold text-indigo-300 text-lg">
+              Can I change my plan later?
+            </summary>
+            <p class="text-gray-400 mt-3">
+              Yes! You can upgrade or downgrade anytime from your account settings.
+            </p>
+          </details>
+
+          <p class="text-gray-400 mt-8 text-sm leading-relaxed">
+            Still need help? Email us at
+            <a href="mailto:support@penora.com" class="text-indigo-400 hover:underline"
+              >support@penora.com</a
+            >
+            or DM us on
+            <a href="#" class="text-pink-400 hover:underline">Twitter</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ⚫ Footer -->
+    <footer class="bg-gray-900 py-10 text-center border-t border-gray-800 mt-10">
+      <p class="text-gray-500 text-sm">
+        © 2025 Penora. All rights reserved. |
+        <a href="privacy.html" class="text-indigo-400 hover:underline">Privacy Policy</a>
+      </p>
+    </footer>
+  </body>
+</html>
