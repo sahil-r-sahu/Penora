@@ -33,7 +33,7 @@ This project is perfect for:
 
 ## 🌐 Live Demo
 
-🔗 # [Penora – Modern Blogging Platform](https://sahil-r-sahu.github.io/Penora/)
+🔗 # [Penora – Modern Blogging Platform](https://sahil-r-sahu.github.io/Penora-Nest/)
 
 ## 📸 Screenshots
 
