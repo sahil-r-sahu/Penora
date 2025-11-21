@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home- Penora</title>
+    <link rel="icon" type="image/png" href="../img/favicon.png" />
+    <link href="./output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="./home.js"></script>
+  </head>
+  <body class="font-sans">
+    <!-- Nav Bar -->
+    <nav class="bg-gray-900 text-white px-4 py-3 shadow-md z-50 relative">
+      <div class="max-w-6xl mx-auto flex justify-between items-center relative">
+        <!-- Logo -->
+        <a href="./index.html" class="flex items-center space-x-2">
+          <img
+            src="../img/navBar_logo.png"
+            alt="Penora"
+            class="h-10 w-auto rounded-2xl cursor-pointer hover:shadow-2xl hover:shadow-white/70"
+          />
+        </a>
+
+        <!-- Search Bar -->
+        <div class="relative w-72 lg:w-96 hidden md:block">
+          <input
+            type="text"
+            placeholder="Search blogs..."
+            class="w-full pl-10 pr-4 py-2 rounded-full text-white bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-700"
+          />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5 text-gray-500 absolute left-3 top-2.5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 21l-4.35-4.35M16.65 10.5A6.15 6.15 0 1 1 10.5 4.35a6.15 6.15 0 0 1 6.15 6.15z"
+            />
+          </svg>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-6">
+          <!-- Products Dropdown -->
+          <div class="relative group">
+            <button id="pdt-btn" class="hover:text-blue-400 focus:outline-none cursor-pointer">
+              Products🔽
+            </button>
+            <div
+              id="pdt-dropdown"
+              class="absolute left-0 hidden group-hover:block bg-gray-800 rounded-md mt-2 w-56 p-2 space-y-1 z-50"
+            >
+              <a href="#" class="block text-center hover:text-blue-400">Newsletter</a>
+              <a href="#" class="block text-center hover:text-blue-400">Play Games</a>
+              <a href="#" class="block text-center hover:text-blue-400">Kongo Group</a>
+            </div>
+          </div>
+
+          <!-- Resources Dropdown -->
+          <div class="relative group">
+            <button
+              id="resourses-btn"
+              class="hover:text-blue-400 focus:outline-none cursor-pointer"
+            >
+              Resources🔽
+            </button>
+            <div
+              id="resourses-dropdown"
+              class="absolute left-0 hidden group-hover:block bg-gray-800 rounded-md mt-2 w-56 p-2 space-y-1 z-50"
+            >
+              <a href="./contact.html" class="block text-center hover:text-blue-400"
+                >Support Center</a
+              >
+              <a href="./aboutUS.html" class="block text-center hover:text-blue-400">About Us</a>
+              <a href="#" class="block text-center hover:text-blue-400">Documentation</a>
+              <a href="#" class="block text-center hover:text-blue-400">Popular Blogs</a>
+              <a href="./login.html" class="block text-center hover:text-blue-400">Create a Blog</a>
+            </div>
+          </div>
+
+          <a href="./pricing.html" class="hover:text-blue-400">Upgrade👑</a>
+
+          <!-- User Dropdown -->
+          <div class="relative">
+            <button id="user-btn" class="flex items-center space-x-2 focus:outline-none">
+              <img
+                src="../img/user.jpg"
+                alt="User"
+                class="h-8 w-8 rounded-full border-2 border-indigo-400"
+              />
+              <span>User</span>
+              <svg
+                class="w-4 h-4 ml-1"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div
+              id="user-dropdown"
+              class="hidden absolute right-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg py-2 z-50"
+            >
+              <a href="#" class="block px-4 py-2 hover:bg-gray-700">Profile</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-700">Dashboard</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-700">Settings</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-700">Security</a>
+              <a href="./pricing.html" class="block px-4 py-2 hover:bg-gray-700">Subscription</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-700">Notifications</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-700">Select Language</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-700">Invite Friends</a>
+              <a href="./contact.html" class="block px-4 py-2 hover:bg-gray-700">Help & Support</a>
+              <hr class="border-gray-600 my-1" />
+              <a href="./login.html" class="block px-4 py-2 hover:bg-gray-700 text-red-500"
+                >Logout</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden text-3xl focus:outline-none">☰</button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden flex-col bg-gray-800 text-white mt-3 space-y-3 py-4 px-4 rounded-lg shadow-lg"
+      >
+        <input
+          type="text"
+          placeholder="Search blogs..."
+          class="w-full pl-10 pr-4 py-2 rounded-full text-white bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+        />
+        <br />
+
+        <!-- User Mobile Links -->
+        <div class="border-t border-gray-700 pt-2 space-y-1">
+          <a href="#" class="block px-2 py-2 hover:bg-gray-700 rounded">Profile</a>
+          <a href="#" class="block px-2 py-2 hover:bg-gray-700 rounded">Dashboard</a>
+          <a href="#" class="block px-2 py-2 hover:bg-gray-700 rounded">Settings</a>
+          <a href="#" class="block px-2 py-2 hover:bg-gray-700 rounded">Security</a>
+          <a href="#" class="block px-2 py-2 hover:bg-gray-700 rounded">Subscription</a>
+          <a href="#" class="block px-2 py-2 hover:bg-gray-700 rounded">Notifications</a>
+          <a href="#" class="block px-2 py-2 hover:bg-gray-700 rounded">Select Language</a>
+          <a href="#" class="block px-2 py-2 hover:bg-gray-700 rounded">Invite Friends</a>
+          <a href="./contact.html" class="block px-2 py-2 hover:bg-gray-700 rounded"
+            >Help & Support</a
+          >
+          <a href="./login.html" class="block px-2 py-2 hover:bg-gray-700 text-red-500 rounded"
+            >Logout</a
+          >
+        </div>
+        <br />
+        <hr />
+        <br />
+        <!-- Products & Resources Mobile -->
+        <div class="pt-3 space-y-2">
+          <a href="./login.html" class="block hover:text-blue-400">Create a Blog</a>
+          <a href="./pricing.html" class="block hover:text-blue-400">Upgrade👑</a>
+          <a href="#" class="block hover:text-blue-400">Popular Blogs</a>
+          <a href="#" class="block hover:text-blue-400">Documentation</a>
+          <a href="./aboutUS.html" class="block hover:text-blue-400">About Us</a>
+          <a href="./contact.html" class="block hover:text-blue-400">Support Center</a>
+          <br />
+          <hr />
+          <br />
+          <a href="#" class="block hover:text-blue-400">Newsletter</a>
+          <a href="#" class="block hover:text-blue-400">Play Games</a>
+          <a href="#" class="block hover:text-blue-400">Kongo Group</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="bg-gray-800 min-h-screen py-10">
+      <section
+        class="bg-linear-to-r from-indigo-600 to-pink-500 text-white py-10 text-center rounded-3xl shadow-lg my-5 mx-4 md:mx-20"
+      >
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Everyone Has a Story to Tell ✨</h2>
+        <p class="text-lg md:text-xl mb-6 text-gray-100">
+          Start your blogging journey today — no setup, no limits, just pure creativity.
+        </p>
+        <a href="./create.html"
+          ><button
+            class="px-6 py-3 bg-white text-indigo-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-md cursor-pointer"
+          >
+            Create a Blog Now 🚀
+          </button></a
+        >
+      </section>
+
+      <div class="px-4 sm:px-6 lg:px-8 mb-6 flex flex-col gap-10 mt-10">
+        <h1 class="text-3xl sm:text-2xl md:text-3xl font-bold text-center mb-3 md:mb-4 text-white">
+          Popular Blog’s
+        </h1>
+        <div class="mx-auto max-w-6xl hover:shadow-2xl hover:shadow-indigo-500/70 rounded-4xl">
+          <article
+            class="popular-blog flex flex-col items-center bg-gray-800 text-white rounded-4xl p-6 sm:p-8 md:p-10"
+          >
+            <img
+              src="../img/1st.png"
+              alt="How to Meditate"
+              class="w-3/4 sm:w-2/3 rounded-4xl border-4 border-gray-500 mb-6 object-cover h-auto hover:shadow-2xl hover:shadow-indigo-500/70"
+              loading="lazy"
+            />
+
+            <h2
+              class="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-3 md:mb-4 hover:text-pink-400 transition-colors duration-200"
+            >
+              <a
+                href="https://akashgautam.com/2018/01/30/how-to-meditate-increase-mindfulness-everything-you-need-to-know/"
+                class="inline-block"
+              >
+                How to Meditate & Increase Mindfulness?
+              </a>
+            </h2>
+
+            <p
+              class="text-gray-300 text-justify leading-relaxed mb-4 px-2 sm:px-4 md:px-8 font-Roboto"
+            >
+              ‘How to meditate, increase mindfulness & find God’ is not my Blog or writing. My
+              intellect is too small to even begin to answer this most profound question like the
+              saints who walked this country did. They gave to this world the real meaning of
+              spirituality and the precise understanding of mindfulness, who is God and how to find
+              God through meditation. This blog is their message, their words, their writing. I feel
+              immensely blessed to be their very small instrument as I amplify their message
+              further. This blog is also my very personal spiritual story: the story of my learning
+              on the most beautiful road of spirituality (Not religion). This blog is long but a
+              comprehensive guide to the above question (I promise). You will need 2-3 readings to
+              fully absorb everything that’s written here.
+              <a href="#" class="text-indigo-400 font-semibold hover:underline ml-1">Read more →</a>
+            </p>
+
+            <div class="author text-center text-indigo-300 font-medium mt-2">
+              <a
+                href="https://akashgautam.com/blog/"
+                class="hover:text-pink-400 transition-colors duration-200"
+              >
+                — Akash Gautam
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div
+          class="mx-auto max-w-6xl hover:shadow-2xl hover:shadow-indigo-500/70 rounded-4xl transition-colors duration-200"
+        >
+          <article
+            class="popular-blog flex flex-col items-center bg-gray-800 text-white rounded-4xl p-6 sm:p-8 md:p-10"
+          >
+            <img
+              src="../img/2nd.png"
+              alt="smart 6-super-smart-ways-to-raise-your-emotional-quotient"
+              class="w-3/4 sm:w-2/3 rounded-4xl border-4 border-gray-500 mb-6 object-cover h-auto hover:shadow-2xl hover:shadow-indigo-500/70"
+              loading="lazy"
+            />
+
+            <h2
+              class="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-3 md:mb-4 hover:text-pink-400 transition-colors duration-200"
+            >
+              <a
+                href="https://akashgautam.com/2019/01/17/6-super-smart-ways-to-raise-your-emotional-quotient/"
+                class="inline-block"
+              >
+                6 Super Smart Ways to Raise your Emotional Quotient
+              </a>
+            </h2>
+
+            <p class="text-gray-300 text-justify leading-relaxed mb-4 px-2 sm:px-4 md:px-8">
+              If you google Emotional Quotient (EQ), the search engine giant will throw some very
+              sophisticated, ‘padha likha’ definitions at you. Might just end up challenging your IQ
+              as well. Don’t even get into all that. There might be many complicated things in life;
+              understanding and figuring out simple, doable & smart ways to raise your emotional
+              quotient should not be one of those headaches. Simply put, EQ is your ability to
+              handle all the shit life throws at you, without losing your own calm and composure.
+              Emotions are what makes us human (although there are pets in some homes who display
+              more truer emotions these days than the owners). The word ‘Emotion’ stands for ‘Energy
+              in Motion’ :-Hence there lies huge value in staying truthful about your emotions and
+              using your mind and emotions in your favor and not against your own self
+              <a href="#" class="text-indigo-400 font-semibold hover:underline ml-1">Read more →</a>
+            </p>
+
+            <div class="author text-center text-indigo-300 font-medium mt-2">
+              <a
+                href="https://akashgautam.com/blog/"
+                class="hover:text-pink-400 transition-colors duration-200"
+              >
+                — Akash Gautam
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="mx-auto max-w-6xl hover:shadow-2xl hover:shadow-indigo-500/70 rounded-4xl">
+          <article
+            class="popular-blog flex flex-col items-center bg-gray-800 text-white rounded-4xl p-6 sm:p-8 md:p-10"
+          >
+            <img
+              src="../img/3rd.png"
+              alt="Tobias Becs"
+              class="w-3/4 sm:w-2/3 rounded-4xl border-4 border-gray-500 mb-6 object-cover h-auto hover:shadow-2xl hover:shadow-indigo-500/70"
+              loading="lazy"
+            />
+
+            <h2
+              class="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-3 md:mb-4 hover:text-pink-400 transition-colors duration-200"
+            >
+              <a href="#" class="inline-block"> Sports blog: Tobias Becs </a>
+            </h2>
+
+            <p class="text-gray-300 text-justify leading-relaxed mb-4 px-2 sm:px-4 md:px-8">
+              As an award-winning content creator and Guinness World Record holder, football player
+              <a class="text-blue-600" href="https://www.tobiasbecs.com/blog">Tobias Becs</a>
+              continues to deliver with a unique approach to his “News” blog. It not only contains
+              brief notes about his daily life but also vlogs and photo galleries. Every post is
+              light on words, if they contain any at all. Tobias instead uses his blog as a place to
+              centralize and promote existing videos, social posts and products.
+              <a href="#" class="text-indigo-400 font-semibold hover:underline ml-1">Read more →</a>
+            </p>
+
+            <div class="author text-center text-indigo-300 font-medium mt-2">
+              <a href="#" class="hover:text-pink-400 transition-colors duration-200">
+                — Sahil Sahu
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="mx-auto max-w-6xl hover:shadow-2xl hover:shadow-indigo-500/70 rounded-4xl">
+          <article
+            class="popular-blog flex flex-col items-center bg-gray-800 text-white rounded-4xl p-6 sm:p-8 md:p-10"
+          >
+            <img
+              src="../img/4th.png"
+              alt="nature"
+              class="w-3/4 sm:w-2/3 rounded-4xl border-4 border-gray-500 mb-6 object-cover h-auto hover:shadow-2xl hover:shadow-indigo-500/70"
+              loading="lazy"
+            />
+
+            <h2
+              class="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-3 md:mb-4 hover:text-pink-400 transition-colors duration-200"
+            >
+              <a
+                href="https://natureinmind.ie/nature-teacher-happens-allow-everything/"
+                class="inline-block"
+              >
+                Nature is a teacher – What happens when you allow everything to be “as it is”?
+              </a>
+            </h2>
+
+            <p class="text-gray-300 text-justify leading-relaxed mb-4 px-2 sm:px-4 md:px-8">
+              A number of years ago I went on holiday to a beautiful part of Portugal. We stayed in
+              a converted farmhouse in the middle of a national park. The farmhouse was in a valley.
+              We arrived in the evening when the birds were just starting to roost. It was still
+              warm and the air smelled sweet with pollen. You could hear the hum of crickets. A
+              small river flowed through that valley. We opened a rickety gate and crossed a small
+              wooden bridge. As we walked along the narrow path that led to our house I had a clear
+              vision of what my morning routine would be like for the next fourteen days. I had been
+              working hard for the last few months and I felt tired. I wanted this holiday to be a
+              mini retreat. I would wake up early each day when it was still quite cool and I would
+              meditate for a while.
+              <a
+                href="https://natureinmind.ie/nature-teacher-happens-allow-everything/"
+                class="text-indigo-400 font-semibold hover:underline ml-1"
+                >Read more →</a
+              >
+            </p>
+
+            <div class="author text-center text-indigo-300 font-medium mt-2">
+              <a
+                href="https://natureinmind.ie/nature-teacher-happens-allow-everything/"
+                class="hover:text-pink-400 transition-colors duration-200"
+              >
+                — Barryevan
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="mx-auto max-w-6xl hover:shadow-2xl hover:shadow-indigo-500/70 rounded-4xl">
+          <article
+            class="popular-blog flex flex-col items-center bg-gray-800 text-white rounded-4xl p-6 sm:p-8 md:p-10"
+          >
+            <img
+              src="../img/5th.png"
+              alt="future self"
+              class="w-3/4 sm:w-2/3 rounded-4xl border-4 border-gray-500 mb-6 object-cover h-auto hover:shadow-2xl hover:shadow-indigo-500/70"
+              loading="lazy"
+            />
+
+            <h2
+              class="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-3 md:mb-4 hover:text-pink-400 transition-colors duration-200"
+            >
+              <a
+                href="https://riyahspeaks.com/dear-me-a-birthday-letter-to-my-future-self/"
+                class="inline-block"
+              >
+                Dear Me: A Birthday Letter To My Future Self
+              </a>
+            </h2>
+
+            <p class="text-gray-300 text-justify leading-relaxed mb-4 px-2 sm:px-4 md:px-8">
+              Saying that feels surreal. Thirty once felt so far away, like something you’d reach
+              only after life had “settled down.” But now that you’re here, I hope life has settled
+              within you, even if things around you are still shifting. I hope you woke up today
+              feeling loved, aligned, and grounded—because you deserve that kind of peace.
+              <a
+                href="https://riyahspeaks.com/dear-me-a-birthday-letter-to-my-future-self/"
+                class="text-indigo-400 font-semibold hover:underline ml-1"
+                >Read more →</a
+              >
+            </p>
+
+            <div class="author text-center text-indigo-300 font-medium mt-2">
+              <a
+                href="https://riyahspeaks.com/"
+                class="hover:text-pink-400 transition-colors duration-200"
+              >
+                — Riyans
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+      <section
+        class="bg-linear-to-r from-indigo-600 to-pink-500 text-white py-10 text-center rounded-3xl shadow-lg my-5 mx-4 md:mx-20"
+      >
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Your voice matters.</h2>
+        <p class="text-lg md:text-xl mb-6 text-gray-100">
+          Start your blog today and leave your mark on the world.
+        </p>
+        <a href="./create.html"
+          ><button
+            class="px-6 py-3 bg-white text-indigo-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-md cursor-pointer"
+          >
+            Create a New Blog
+          </button></a
+        >
+      </section>
+
+      <section class="bg-gray-800 text-white py-20 px-4">
+        <div class="max-w-4xl mx-auto text-center mb-12">
+          <h2
+            class="text-4xl font-bold mb-4 bg-linear-to-r from-indigo-400 via-pink-400 to-yellow-400 bg-clip-text text-transparent"
+          >
+            💬 You asked, we answered.
+          </h2>
+          <p class="text-gray-400">
+            Everything you need to know about building, growing, and monetizing your blog with
+            <a href="./index.html"><span class="text-indigo-400 font-semibold">Penora</span></a> .
+          </p>
+        </div>
+
+        <!-- Q&A container -->
+        <div class="max-w-3xl mx-auto space-y-4">
+          <!-- Question 6 -->
+          <div
+            class="group border border-green-500 rounded-xl p-5 transition-all hover:shadow-[0_0_25px_rgba(34,197,94,0.8)]"
+          >
+            <button
+              class="flex justify-between items-center w-full text-left text-lg font-semibold text-green-300 focus:outline-none"
+              onclick="toggleAnswer(6)"
+            >
+              <span>Why did we name it “Penora”? ✍️</span>
+              <svg
+                id="icon-6"
+                class="w-5 h-5 text-green-400 transition-transform duration-300"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <p id="answer-6" class="text-gray-400 mt-3 hidden">
+              At Penora,
+              <span class="text-green-500 font-bold"
+                >we believe that every pen holds a writer’s aura</span
+              >
+              — the unique energy, creativity, and emotion that flow through words. ✨ The name
+              Penora is born from this belief — Pen + Aura. It symbolizes our mission to empower
+              every writer, creator, and thinker to express their stories freely and share their
+              aura with the world. 🌍💫
+            </p>
+          </div>
+
+          <!-- Question 1 -->
+          <div
+            class="group border border-indigo-600 rounded-xl p-5 transition-all hover:shadow-[0_0_25px_rgba(79,70,229,0.8)]"
+          >
+            <button
+              class="flex justify-between items-center w-full text-left text-lg font-semibold text-indigo-300 focus:outline-none"
+              onclick="toggleAnswer(1)"
+            >
+              <span>How can I create and publish a new blog on Penora?</span>
+              <svg
+                id="icon-1"
+                class="w-5 h-5 text-indigo-400 transition-transform duration-300"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <p id="answer-1" class="text-gray-400 mt-3 hidden">
+              Once you’re logged in, click “Create a Blog” from your dashboard sidebar or top
+              navigation. Add your title, content, and images, then hit Publish. You can always edit
+              or delete your post later from My Blogs → Edit Post.
+            </p>
+          </div>
+
+          <!-- Question 2 -->
+          <div
+            class="group border border-pink-500 rounded-xl p-5 transition-all hover:shadow-[0_0_25px_rgba(236,72,153,0.8)]"
+          >
+            <button
+              class="flex justify-between items-center w-full text-left text-lg font-semibold text-pink-300 focus:outline-none"
+              onclick="toggleAnswer(2)"
+            >
+              <span>How do I upgrade my plan or manage my subscription?</span>
+              <svg
+                id="icon-2"
+                class="w-5 h-5 text-pink-400 transition-transform duration-300"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <p id="answer-2" class="text-gray-400 mt-3 hidden">
+              Head over to Settings → Subscription, or click Upgrade👑 in the navbar. There, you can
+              view your current plan, upgrade to premium, or cancel anytime. All changes are applied
+              instantly to your account.
+            </p>
+          </div>
+
+          <!-- Question 3 -->
+          <div
+            class="group border border-yellow-500 rounded-xl p-5 transition-all hover:shadow-[0_0_25px_rgba(234,179,8,0.8)]"
+          >
+            <button
+              class="flex justify-between items-center w-full text-left text-lg font-semibold text-yellow-300 focus:outline-none"
+              onclick="toggleAnswer(3)"
+            >
+              <span>How do I change my profile picture or username?</span>
+              <svg
+                id="icon-3"
+                class="w-5 h-5 text-yellow-400 transition-transform duration-300"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <p id="answer-3" class="text-gray-400 mt-3 hidden">
+              Go to Profile → Edit Profile. You can upload a new profile image, update your display
+              name, or edit your “About Me” section. Don’t forget to click Save Changes to update
+              your profile.
+            </p>
+          </div>
+
+          <!-- Question 4 -->
+          <div
+            class="group border border-green-500 rounded-xl p-5 transition-all hover:shadow-[0_0_25px_rgba(34,197,94,0.8)]"
+          >
+            <button
+              class="flex justify-between items-center w-full text-left text-lg font-semibold text-green-300 focus:outline-none"
+              onclick="toggleAnswer(4)"
+            >
+              <span>What should I do if I forgot my password or want to change it?</span>
+              <svg
+                id="icon-4"
+                class="w-5 h-5 text-green-400 transition-transform duration-300"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <p id="answer-4" class="text-gray-400 mt-3 hidden">
+              If you’re logged in, open Settings → Security → Change Password. Enter your current
+              password, then the new one. If you’re logged out, use the Forgot Password? link on the
+              login page to reset it via email.
+            </p>
+          </div>
+
+          <!-- Question 5 -->
+          <div
+            class="group border border-indigo-400 rounded-xl p-5 transition-all hover:shadow-[0_0_25px_rgba(129,140,248,0.8)]"
+          >
+            <button
+              class="flex justify-between items-center w-full text-left text-lg font-semibold text-indigo-300 focus:outline-none"
+              onclick="toggleAnswer(5)"
+            >
+              <span>How can I contact support if I face an issue?</span>
+              <svg
+                id="icon-5"
+                class="w-5 h-5 text-indigo-400 transition-transform duration-300"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <p id="answer-5" class="text-gray-400 mt-3 hidden">
+              Visit the Help & Support section or use the Contact Us page. You can also email us
+              directly at support@penora.com . Our team usually responds within 24 hours.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 🌙 Footer Section -->
+    <footer class="bg-gray-950 text-gray-400 pt-16 pb-10 px-4 relative">
+      <!-- Gradient top border -->
+      <div
+        class="absolute top-0 left-0 w-full h-0.5 bg-linear-to-r from-indigo-500 via-pink-500 to-yellow-400"
+      ></div>
+
+      <!-- Footer Grid -->
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-2 text-center md:text-left">
+        <!-- Brand Section -->
+        <div>
+          <h2
+            class="text-3xl font-bold bg-linear-to-r from-indigo-400 to-pink-400 bg-clip-text text-transparent"
+          >
+            ✍️ Penora
+          </h2>
+          <p class="mt-4 text-gray-400">
+            The smartest blogging platform for creative minds. Simple, flexible, and built for
+            growth.
+          </p>
+          <div class="flex justify-center md:justify-start space-x-4 mt-5">
+            <a
+              href="#"
+              class="p-2 rounded-full bg-gray-800 hover:bg-indigo-600 transition-all shadow-md hover:shadow-indigo-500/40"
+            >
+              <i class="fab fa-facebook-f text-white"></i>
+            </a>
+            <a
+              href="#"
+              class="p-2 rounded-full bg-gray-800 hover:bg-pink-500 transition-all shadow-md hover:shadow-pink-500/40"
+            >
+              <i class="fab fa-instagram text-white"></i>
+            </a>
+            <a
+              href="#"
+              class="p-2 rounded-full bg-gray-800 hover:bg-sky-500 transition-all shadow-md hover:shadow-sky-400/40"
+            >
+              <i class="fab fa-twitter text-white"></i>
+            </a>
+            <a
+              href="#"
+              class="p-2 rounded-full bg-gray-800 hover:bg-green-500 transition-all shadow-md hover:shadow-green-400/40"
+            >
+              <i class="fab fa-linkedin-in text-white"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-xl font-semibold text-white mb-4">Quick Links</h3>
+          <ul class="space-y-3">
+            <li><a href="./home.html" class="hover:text-indigo-400 transition-all">Home</a></li>
+            <li><a href="./aboutUS.html" class="hover:text-indigo-400 transition-all">About</a></li>
+            <li><a href="#" class="hover:text-indigo-400 transition-all">Features</a></li>
+            <li>
+              <a href="./pricing.html" class="hover:text-indigo-400 transition-all">Pricing</a>
+            </li>
+            <li>
+              <a href="./contact.html" class="hover:text-indigo-400 transition-all">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Resources -->
+        <div>
+          <h3 class="text-xl font-semibold text-white mb-4">Resources</h3>
+          <ul class="space-y-3">
+            <li>
+              <a href="./contact.html" class="hover:text-pink-400 transition-all">Help Center</a>
+            </li>
+            <li><a href="#" class="hover:text-pink-400 transition-all">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-pink-400 transition-all">Terms of Use</a></li>
+            <li><a href="#" class="hover:text-pink-400 transition-all">API Docs</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div>
+          <h3 class="text-xl font-semibold text-white mb-4">Stay Updated</h3>
+          <p class="text-gray-400 mb-3">
+            Subscribe for the latest updates, writing tips, and feature releases 🚀
+          </p>
+          <form class="flex flex-col gap-2">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="px-4 py-2 rounded-lg bg-gray-800 text-white border border-gray-700 focus:border-indigo-500 outline-none transition-all flex-1"
+            />
+            <button
+              type="submit"
+              class="px-5 py-2 rounded-lg bg-linear-to-r from-indigo-500 to-pink-500 text-white font-semibold hover:shadow-[0_0_15px_rgba(99,102,241,0.8)] transition-all"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="my-10 border-t border-gray-800"></div>
+
+      <!-- Bottom Section -->
+      <div class="text-center text-sm text-gray-500">
+        © <span id="year"></span>
+        <a href="./home.html"><span class="text-indigo-400 font-semibold">Penora</span></a
+        >. All Rights Reserved. Made with ❤️ for writers everywhere.
+      </div>
+    </footer>
+  </body>
+</html>

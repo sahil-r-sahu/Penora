@@ -1,6 +1,10 @@
 <div align="center">
 
-# 📝 Penora – Modern Blogging Platform
+<div align="center">
+  <img src="./img/navBar_logo.png" alt="Penora Logo" width="140" style="border-radius: 10px;">
+
+  <h1>Penora – Modern Blogging Platform</h1>
+</div>
 
 ### A clean, fast and beautiful platform to read & create blogs.
 
@@ -110,7 +114,7 @@ Follow these steps to run Penora on your local machine:
 ### 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/your-username/penora.git
+git clone https://github.com/sahil-r-sahu/penora.git
 ```
 
 ### 2️⃣ Navigate to the project directory
